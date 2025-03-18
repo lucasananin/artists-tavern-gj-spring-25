@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerWeapon: {fileID: 5732686}
-  _costPerShot: 10
+  _costPerShot: 1
   _maxValue: 100
   _currentValue: 0
 --- !u!1 &26513177
