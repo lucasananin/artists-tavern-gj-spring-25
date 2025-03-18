@@ -98,9 +98,10 @@ GameObject:
   - component: {fileID: 2894409494657119828}
   - component: {fileID: 6600432507984170507}
   - component: {fileID: 5376656467765168899}
+  - component: {fileID: 3484376743960121549}
   - component: {fileID: 8476205570020617505}
   - component: {fileID: 8070063160786493275}
-  - component: {fileID: 3484376743960121549}
+  - component: {fileID: 676222072239201775}
   m_Layer: 0
   m_Name: Enemy_1
   m_TagString: Untagged
@@ -187,6 +188,21 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &3484376743960121549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6797277089447192852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c2e451ca95c4d2479480838b88ec993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: 6600432507984170507}
+  _direction: {x: 0, y: -1}
+  _speed: 2
 --- !u!114 &8476205570020617505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: {fileID: 8476205570020617505}
---- !u!114 &3484376743960121549
+--- !u!114 &676222072239201775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,9 +239,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6797277089447192852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c2e451ca95c4d2479480838b88ec993, type: 3}
+  m_Script: {fileID: 11500000, guid: 16e572ebd6caf1f46b58e6c2ff56c30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rb: {fileID: 6600432507984170507}
-  _direction: {x: 0, y: -1}
-  _speed: 3
+  _health: {fileID: 8476205570020617505}
