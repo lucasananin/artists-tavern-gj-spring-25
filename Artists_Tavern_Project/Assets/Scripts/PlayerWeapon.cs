@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerWeapon : WeaponBehaviour
 {
+    [Space]
+    [SerializeField] PlayerEnergy _energy = null;
     [SerializeField] float _fireRate = 0.1f;
 
     [Header("// Readonly")]
@@ -19,7 +22,7 @@ public class PlayerWeapon : WeaponBehaviour
     {
         _nextFire += Time.fixedDeltaTime;
 
-        if (_nextFire > _fireRate && _isHoldingTrigger)
+        if (_nextFire > _fireRate && _isHoldingTrigger && _energy.HasEnoughValue())
         {
             _nextFire = 0;
             Shoot();
