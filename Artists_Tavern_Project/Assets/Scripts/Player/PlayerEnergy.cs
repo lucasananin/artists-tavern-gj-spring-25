@@ -53,7 +53,7 @@ public class PlayerEnergy : MonoBehaviour
 
     public void RestoreValue()
     {
-        IncreaseValue(12345);
+        IncreaseValue(_maxValue);
     }
 
     public float GetNormalizedValue()
