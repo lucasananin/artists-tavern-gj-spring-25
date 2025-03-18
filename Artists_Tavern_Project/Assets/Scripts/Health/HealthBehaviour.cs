@@ -31,7 +31,6 @@ public class HealthBehaviour : MonoBehaviour
 
     public virtual void Die()
     {
-        gameObject.SetActive(false);
         OnDie?.Invoke(this);
     }
 

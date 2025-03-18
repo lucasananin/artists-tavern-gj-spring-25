@@ -133,6 +133,8 @@ GameObject:
   - component: {fileID: 5732685}
   - component: {fileID: 5732686}
   - component: {fileID: 5732687}
+  - component: {fileID: 5732688}
+  - component: {fileID: 5732689}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -234,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 5732684}
-  _speed: 5
+  _speed: 10
 --- !u!114 &5732686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +273,33 @@ MonoBehaviour:
   _costPerShot: 1
   _maxValue: 100
   _currentValue: 0
+--- !u!114 &5732688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5732681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a995c607994a4234a965be7625a11476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxValue: 1
+  _currentValue: 0
+--- !u!114 &5732689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5732681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b50f8a1d33327d04695dd6b2ca6f67fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: {fileID: 5732688}
 --- !u!1 &26513177
 GameObject:
   m_ObjectHideFlags: 0

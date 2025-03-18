@@ -16,4 +16,9 @@ public class PlayerShield : MonoBehaviour
         _collider.enabled = _value;
         _renderer.enabled = _value;
     }
+
+    public bool IsEnabled()
+    {
+        return _collider.isActiveAndEnabled;
+    }
 }
