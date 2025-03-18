@@ -8,6 +8,8 @@ public class PlayerWeapon : WeaponBehaviour
     [SerializeField] float _nextFire = 0f;
     [SerializeField] bool _isHoldingTrigger = false;
 
+    public bool IsHoldingTrigger { get => _isHoldingTrigger; private set => _isHoldingTrigger = value; }
+
     private void Update()
     {
         _isHoldingTrigger = Input.GetButton("Jump");
