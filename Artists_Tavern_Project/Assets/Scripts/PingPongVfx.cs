@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PingPongVfx : MonoBehaviour
@@ -24,11 +23,8 @@ public class PingPongVfx : MonoBehaviour
 
         if (!_update) return;
 
-        //float _x = _useSin ? GetSin(_xMagnitude) : GetCos(_xMagnitude);
-        //float _y = _useSin ? GetSin(_yMagnitude) : GetCos(_yMagnitude);
         Vector3 _position = new Vector3(GetXValue(), GetYValue());
-        GetComponent<Rigidbody2D>().linearVelocity = _position;
-        //_transform.localPosition = _position;
+        _transform.localPosition = _position;
     }
 
     public float GetXValue()
@@ -44,12 +40,10 @@ public class PingPongVfx : MonoBehaviour
     public float GetSin(float _magnitude)
     {
         return _initialPosition.x + Mathf.Sin(_timer) * _magnitude;
-        //return Mathf.Sin(Time.time * _speed) * _magnitude;
     }
 
     public float GetCos(float _magnitude)
     {
         return _initialPosition.y + Mathf.Cos(_timer) * _magnitude;
-        //return Mathf.Cos(Time.time * _speed) * _magnitude;
     }
 }

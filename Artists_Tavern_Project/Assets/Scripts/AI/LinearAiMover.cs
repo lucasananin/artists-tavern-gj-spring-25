@@ -9,12 +9,9 @@ public class LinearAiMover : AiMover
 
     [Header("// Readonly")]
     [SerializeField] PingPongVfx _pingPongBehaviour = null;
-    [SerializeField] Vector2 _initialPosition = default;
 
     private void Start()
     {
-        _initialPosition = transform.position;
-
         var _velocity = _direction * _speed;
         _rb.linearVelocity = _velocity;
     }
@@ -23,10 +20,9 @@ public class LinearAiMover : AiMover
     {
         if (_pingPongBehaviour != null)
         {
-            var _x = _pingPongX ? _pingPongBehaviour.GetXValue() /*+ _initialPosition.x */: _rb.position.x;
-            var _y = _pingPongY ? _pingPongBehaviour.GetYValue() /*+ _initialPosition.y */: _rb.position.y;
+            var _x = _pingPongX ? _pingPongBehaviour.GetXValue() : _rb.position.x;
+            var _y = _pingPongY ? _pingPongBehaviour.GetYValue() : _rb.position.y;
             _rb.position = new Vector2(_x, _y);
-            //_rb.linearVelocity = new Vector2(_x, _y);
         }
     }
 }
