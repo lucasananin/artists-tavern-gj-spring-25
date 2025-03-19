@@ -161,8 +161,14 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  _renderer: {fileID: 7328171837516990833}
   _burstRate: 0
   _nextFire: 0
   _nextBurst: 0
   _currentShootCount: 0
   _isBursting: 0
+--- !u!212 &7328171837516990833 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7347693709998013339, guid: 46f0e222c6b0cb247aea499e191269d2, type: 3}
+  m_PrefabInstance: {fileID: 21010612305097450}
+  m_PrefabAsset: {fileID: 0}

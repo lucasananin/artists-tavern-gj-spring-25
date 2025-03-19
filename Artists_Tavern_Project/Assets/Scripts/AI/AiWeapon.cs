@@ -9,6 +9,8 @@ public class AiWeapon : WeaponBehaviour
     [Space]
     [SerializeField] TagCollectionSO _tagCollection = null;
     [SerializeField] ContactFilter2D _contactFilter = default;
+    [Space]
+    [SerializeField] SpriteRenderer _renderer = null;
 
     [Header("// Readonly")]
     [SerializeField] float _burstRate = 0f;
@@ -21,6 +23,8 @@ public class AiWeapon : WeaponBehaviour
 
     private void Update()
     {
+        if (!_renderer.isVisible) return;
+
         PullTrigger();
     }
 
