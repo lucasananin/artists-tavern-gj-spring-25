@@ -6,5 +6,6 @@ public class AiHealth : HealthBehaviour
     {
         base.Die();
         Destroy(gameObject);
+        //Debug.Log($"a", this);
     }
 }
