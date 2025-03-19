@@ -410,10 +410,10 @@ MonoBehaviour:
   - {fileID: 1341970377}
   - {fileID: 1956504187}
   - {fileID: 1418516461}
-  _enemyPrefab: {fileID: 6797277089447192852, guid: 46f0e222c6b0cb247aea499e191269d2, type: 3}
+  _enemyPrefab: {fileID: 6781966346580384766, guid: 3139bf5ce9b68454fbefb15993c1941f, type: 3}
   _waveInitialDelay: 1
-  _spawnDelay: 1
-  _spawnOnStart: 0
+  _spawnDelay: 2
+  _spawnOnStart: 1
 --- !u!1 &243707838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,13 +1916,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_4
       objectReference: {fileID: 0}
+    - target: {fileID: 8075496556590917199, guid: ea0e0d3e6266c1c42a4ce51e0b3ad760, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 826115208201103148, guid: ea0e0d3e6266c1c42a4ce51e0b3ad760, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea0e0d3e6266c1c42a4ce51e0b3ad760, type: 3}
 --- !u!1 &1956504184
 GameObject:
