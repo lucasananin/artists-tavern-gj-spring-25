@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class AiHealth : HealthBehaviour
@@ -6,6 +7,12 @@ public class AiHealth : HealthBehaviour
     {
         base.Die();
         Destroy(gameObject);
-        //Debug.Log($"a", this);
+        //StartCoroutine(Die_Routine());
+    }
+
+    private IEnumerator Die_Routine()
+    {
+        yield return null;
+        Destroy(gameObject);
     }
 }

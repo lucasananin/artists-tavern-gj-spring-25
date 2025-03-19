@@ -14,6 +14,16 @@ public class PlayerScore : MonoBehaviour
         Increase(0);
     }
 
+    private void OnEnable()
+    {
+        ScoreGiver.OnScored += Increase;
+    }
+
+    private void OnDisable()
+    {
+        ScoreGiver.OnScored -= Increase;
+    }
+
     public void Increase(int _value)
     {
         _score += _value;
