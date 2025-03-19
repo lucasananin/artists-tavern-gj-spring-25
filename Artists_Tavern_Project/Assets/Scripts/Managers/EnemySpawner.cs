@@ -7,10 +7,12 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] GameObject _enemyPrefab = null;
     [SerializeField] float _waveInitialDelay = 2f;
     [SerializeField] float _spawnDelay = 1f;
+    [SerializeField] bool _spawnOnStart = true;
 
     private void Start()
     {
-        StartCoroutine(Spawn_Routine());
+        if (_spawnOnStart)
+            StartCoroutine(Spawn_Routine());
     }
 
     private IEnumerator Spawn_Routine()
@@ -33,5 +35,11 @@ public class EnemySpawner : MonoBehaviour
             Random.Range(bounds.min.y, bounds.max.y),
             Random.Range(bounds.min.z, bounds.max.z)
         );
+    }
+
+    public Vector3 GetRandomPointInArea(int _areaIndex)
+    {
+        var _area = _spawnAreas[_areaIndex];
+        return RandomPointInBounds(_area.bounds);
     }
 }
