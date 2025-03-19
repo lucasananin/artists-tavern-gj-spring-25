@@ -11,7 +11,6 @@ public class ShieldAgent : MonoBehaviour
         {
             _damageable.TakeDamage(_damage);
             _energy.IncreaseValue(_damageable.EnergyRestore);
-            //Debug.Log($"b");
         }
     }
 }
