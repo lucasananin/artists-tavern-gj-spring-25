@@ -251,7 +251,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 4173076409106480509, guid: 651ec5a51c28fe247ab7c2533fb1df4a, type: 3}
-  _muzzle: {fileID: 687726375}
+  _weaponRoot: {fileID: 687726375}
+  _muzzles:
+  - {fileID: 687726375}
   _shootForce: 20
   _energy: {fileID: 5732687}
   _fireRate: 0.1
