@@ -142,9 +142,9 @@ MonoBehaviour:
   _muzzles:
   - {fileID: 1041745595865688225}
   _shootForce: 5
-  _fireRate: 0.3
-  _burstRate: 3
+  _burstRateRange: {x: 2, y: 3}
   _shotsPerBurst: 2
+  _fireRate: 0.3
   _canAim: 1
   _tagCollection: {fileID: 11400000, guid: 832a2f52c8b5da74496c8f278341b302, type: 2}
   _contactFilter:
@@ -161,6 +161,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  _burstRate: 0
   _nextFire: 0
   _nextBurst: 0
   _currentShootCount: 0

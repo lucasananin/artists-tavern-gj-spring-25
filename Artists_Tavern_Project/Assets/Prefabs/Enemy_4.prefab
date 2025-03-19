@@ -150,6 +150,9 @@ MonoBehaviour:
   _duration: 1
   _areaIndex: 3
   _waitTimeRange: {x: 2, y: 4}
+  _useMoveCount: 0
+  _moveCount: 0
+  _maxMoveCount: 1
   _enemySpawner: {fileID: 0}
   _timer: 0
   _waitTime: 3
@@ -170,9 +173,9 @@ MonoBehaviour:
   _muzzles:
   - {fileID: 4953752166558468992}
   _shootForce: 5
-  _fireRate: 0.3
-  _burstRate: 2
+  _burstRateRange: {x: 2, y: 3}
   _shotsPerBurst: 1
+  _fireRate: 0.3
   _canAim: 1
   _tagCollection: {fileID: 11400000, guid: 832a2f52c8b5da74496c8f278341b302, type: 2}
   _contactFilter:
@@ -189,6 +192,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  _burstRate: 0
   _nextFire: 0
   _nextBurst: 0
   _currentShootCount: 0

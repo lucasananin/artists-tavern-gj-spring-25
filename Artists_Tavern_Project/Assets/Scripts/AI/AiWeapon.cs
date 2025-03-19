@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class AiWeapon : WeaponBehaviour
 {
-    [SerializeField] float _fireRate = 0.1f;
-    [SerializeField] float _burstRate = 1f;
+    [SerializeField] Vector2 _burstRateRange = default;
     [SerializeField] int _shotsPerBurst = 3;
+    [SerializeField] float _fireRate = 0.1f;
     [SerializeField] bool _canAim = false;
     [Space]
     [SerializeField] TagCollectionSO _tagCollection = null;
     [SerializeField] ContactFilter2D _contactFilter = default;
 
     [Header("// Readonly")]
+    [SerializeField] float _burstRate = 0f;
     [SerializeField] float _nextFire = 0f;
     [SerializeField] float _nextBurst = 0;
     [SerializeField] int _currentShootCount = 0;
@@ -34,6 +35,7 @@ public class AiWeapon : WeaponBehaviour
                 SearchAimTarget();
                 Shoot();
 
+                _burstRate = Random.Range(_burstRateRange.x, _burstRateRange.y);
                 _currentShootCount++;
 
                 if (_currentShootCount >= _shotsPerBurst)
