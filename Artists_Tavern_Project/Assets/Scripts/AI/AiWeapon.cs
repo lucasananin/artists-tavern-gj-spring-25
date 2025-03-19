@@ -5,12 +5,18 @@ public class AiWeapon : WeaponBehaviour
     [SerializeField] float _fireRate = 0.1f;
     [SerializeField] float _burstRate = 1f;
     [SerializeField] int _shotsPerBurst = 3;
+    [SerializeField] bool _canAim = false;
+    [Space]
+    [SerializeField] TagCollectionSO _tagCollection = null;
+    [SerializeField] ContactFilter2D _contactFilter = default;
 
     [Header("// Readonly")]
     [SerializeField] float _nextFire = 0f;
     [SerializeField] float _nextBurst = 0;
     [SerializeField] int _currentShootCount = 0;
     [SerializeField] bool _isBursting = false;
+
+    private Collider2D[] _results = new Collider2D[3];
 
     private void Update()
     {
@@ -25,6 +31,7 @@ public class AiWeapon : WeaponBehaviour
 
             if (_nextFire >= _fireRate)
             {
+                SearchAimTarget();
                 Shoot();
 
                 _currentShootCount++;
@@ -48,11 +55,26 @@ public class AiWeapon : WeaponBehaviour
 
     public void PullTrigger()
     {
-        //if (_isBursting) return;
         if (_nextBurst < _burstRate) return;
 
         _nextBurst -= _burstRate;
         _currentShootCount = 0;
         _isBursting = true;
+    }
+
+    public void SearchAimTarget()
+    {
+        if (!_canAim) return;
+
+        var _hits = Physics2D.OverlapCircle(transform.position, 99f, _contactFilter, _results);
+
+        for (int i = 0; i < _hits; i++)
+        {
+            if (_tagCollection.HasTag(_results[i].gameObject))
+            {
+                Aim(_results[i].transform);
+                break;
+            }
+        }
     }
 }

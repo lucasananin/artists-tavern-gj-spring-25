@@ -143,8 +143,24 @@ MonoBehaviour:
   - {fileID: 1041745595865688225}
   _shootForce: 5
   _fireRate: 0.3
-  _burstRate: 2
+  _burstRate: 3
   _shotsPerBurst: 2
+  _canAim: 1
+  _tagCollection: {fileID: 11400000, guid: 832a2f52c8b5da74496c8f278341b302, type: 2}
+  _contactFilter:
+    useTriggers: 0
+    useLayerMask: 1
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 64
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
   _nextFire: 0
   _nextBurst: 0
   _currentShootCount: 0

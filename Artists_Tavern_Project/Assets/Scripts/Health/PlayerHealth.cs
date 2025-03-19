@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerHealth : HealthBehaviour
 {
     [SerializeField] PlayerShield _shield = null;
-    [SerializeField] TagCollectionSO _enemyTags = null;
 
     public override void TakeDamage(int _value)
     {
