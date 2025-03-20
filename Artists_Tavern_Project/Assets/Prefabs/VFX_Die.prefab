@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5191837402137004390}
   - component: {fileID: 4123282809733689363}
   - component: {fileID: 3346091677771343285}
+  - component: {fileID: -6387715621732862687}
   m_Layer: 0
   m_Name: VFX_Die
   m_TagString: Untagged
@@ -4834,6 +4835,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!210 &-6387715621732862687
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3716593634882109747}
+  m_Enabled: 1
+  m_SortingLayerID: 1917639189
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &8109300275784123784
 GameObject:
   m_ObjectHideFlags: 0
