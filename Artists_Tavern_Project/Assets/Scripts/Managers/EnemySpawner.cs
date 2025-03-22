@@ -5,9 +5,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] WaveSO[] _waves = null;
     [SerializeField] BoxCollider2D[] _spawnAreas = null;
-    [SerializeField] GameObject _enemyPrefab = null;
     [SerializeField] float _waveInitialDelay = 2f;
-    [SerializeField] float _spawnDelay = 1f;
     [SerializeField] bool _spawnOnStart = true;
 
     [Header("// Readonly")]
