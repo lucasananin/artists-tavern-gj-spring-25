@@ -115,6 +115,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6662906797590586326}
   m_SourcePrefab: {fileID: 100100000, guid: 46f0e222c6b0cb247aea499e191269d2, type: 3}
+--- !u!212 &1972097216053428126 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1951447262975741300, guid: 46f0e222c6b0cb247aea499e191269d2, type: 3}
+  m_PrefabInstance: {fileID: 21010612305097450}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2909790537550349502 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2894409494657119828, guid: 46f0e222c6b0cb247aea499e191269d2, type: 3}
@@ -161,14 +166,9 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  _renderer: {fileID: 7328171837516990833}
+  _renderer: {fileID: 1972097216053428126}
   _burstRate: 0
   _nextFire: 0
   _nextBurst: 0
   _currentShootCount: 0
   _isBursting: 0
---- !u!212 &7328171837516990833 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 7347693709998013339, guid: 46f0e222c6b0cb247aea499e191269d2, type: 3}
-  m_PrefabInstance: {fileID: 21010612305097450}
-  m_PrefabAsset: {fileID: 0}

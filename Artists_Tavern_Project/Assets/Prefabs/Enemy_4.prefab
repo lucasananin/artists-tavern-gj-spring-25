@@ -129,9 +129,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2894409494657119828, guid: 46f0e222c6b0cb247aea499e191269d2, type: 3}
   m_PrefabInstance: {fileID: 3334117462439055195}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &5457635237063750848 stripped
+--- !u!212 &3842068391389594159 stripped
 SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 7347693709998013339, guid: 46f0e222c6b0cb247aea499e191269d2, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1951447262975741300, guid: 46f0e222c6b0cb247aea499e191269d2, type: 3}
   m_PrefabInstance: {fileID: 3334117462439055195}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &8075496556590917199 stripped
@@ -197,7 +197,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  _renderer: {fileID: 5457635237063750848}
+  _renderer: {fileID: 3842068391389594159}
   _burstRate: 0
   _nextFire: 0
   _nextBurst: 0
