@@ -43,6 +43,7 @@ public class AreaAiMover : AiMover
     public void Move()
     {
         var _position = _enemySpawner.GetRandomPointInArea(_areaIndex);
+        _rb.DOKill();
         _rb.DOMove(_position, _duration);
     }
 

@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waves:
-  - {fileID: 11400000, guid: 077ba6a0a07b1d845bec57bf80693f3a, type: 2}
+  - {fileID: 11400000, guid: 0e50ea969e424854f9552fe7c00d427b, type: 2}
   _spawnAreas:
   - {fileID: 563158296}
   - {fileID: 1341970377}
