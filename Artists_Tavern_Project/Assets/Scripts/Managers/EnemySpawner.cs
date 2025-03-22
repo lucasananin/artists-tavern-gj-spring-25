@@ -3,29 +3,82 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [SerializeField] WaveSO[] _waves = null;
     [SerializeField] BoxCollider2D[] _spawnAreas = null;
     [SerializeField] GameObject _enemyPrefab = null;
     [SerializeField] float _waveInitialDelay = 2f;
     [SerializeField] float _spawnDelay = 1f;
     [SerializeField] bool _spawnOnStart = true;
 
+    [Header("// Readonly")]
+    [SerializeField] int _currentWaveIndex = 0;
+    [SerializeField] int _activeSpawns = 0;
+
     private void Start()
     {
         if (_spawnOnStart)
-            StartCoroutine(Spawn_Routine());
+        {
+            StartSpawning();
+        }
     }
 
-    private IEnumerator Spawn_Routine()
+    public void StartSpawning()
+    {
+        StartCoroutine(SpawnWave_Routine());
+    }
+
+    private IEnumerator SpawnWave_Routine()
+    {
+        while (_currentWaveIndex < _waves.Length)
+        {
+            yield return StartCoroutine(SpawnEnemies_Routine());
+
+            _currentWaveIndex++;
+        }
+
+        if (_currentWaveIndex >= _waves.Length)
+        {
+            Debug.Log($"All waves finished!");
+        }
+    }
+
+    private IEnumerator SpawnEnemies_Routine()
     {
         yield return new WaitForSeconds(_waveInitialDelay);
 
-        while (true)
-        {
-            var _position = RandomPointInBounds(_spawnAreas[0].bounds);
-            var _instance = Instantiate(_enemyPrefab, _position, Quaternion.identity);
+        var _so = _waves[_currentWaveIndex];
+        var _model = _so.Model;
+        _model.ResetRuntimeAmount();
+        var _spawnCount = 0;
+        var _totalAmount = _model.GetTotalAmount();
 
-            yield return new WaitForSeconds(_spawnDelay);
+        while (_spawnCount < _totalAmount)
+        {
+            while (_activeSpawns >= _model.MaxActiveSpawns)
+            {
+                yield return null;
+            }
+
+            var _entityPrefab = _model.GetEntityPrefab(out int _spawnAreaIndex);
+            var _position = RandomPointInBounds(_spawnAreas[_spawnAreaIndex].bounds);
+            var _instance = Instantiate(_entityPrefab, _position, Quaternion.identity);
+            _instance.GetComponent<AiHealth>().SetOnDestroy(DecreaseActiveSpawns);
+
+            _spawnCount++;
+            _activeSpawns++;
+
+            yield return new WaitForSeconds(_so.SpawnTime);
         }
+
+        while (_activeSpawns > 0)
+        {
+            yield return null;
+        }
+    }
+
+    private void DecreaseActiveSpawns()
+    {
+        _activeSpawns--;
     }
 
     public static Vector3 RandomPointInBounds(Bounds bounds)

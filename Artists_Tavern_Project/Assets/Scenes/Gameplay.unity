@@ -405,6 +405,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847a66bfa9a04a1458942ee58a7ef38a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _waves:
+  - {fileID: 11400000, guid: 0841779deb130af4c8e1d9279731c57c, type: 2}
+  - {fileID: 11400000, guid: d313e85356a0fcf41ba5ebda4c4d140a, type: 2}
   _spawnAreas:
   - {fileID: 563158296}
   - {fileID: 1341970377}
@@ -413,7 +416,9 @@ MonoBehaviour:
   _enemyPrefab: {fileID: 6781966346580384766, guid: 3139bf5ce9b68454fbefb15993c1941f, type: 3}
   _waveInitialDelay: 1
   _spawnDelay: 1
-  _spawnOnStart: 0
+  _spawnOnStart: 1
+  _currentWaveIndex: 0
+  _activeSpawns: 0
 --- !u!1 &243707838
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,18 +1,25 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AiHealth : HealthBehaviour
 {
+    public event UnityAction OnDestroy_Action = null;
+
     public override void Die()
     {
         base.Die();
         Destroy(gameObject);
-        //StartCoroutine(Die_Routine());
     }
 
-    private IEnumerator Die_Routine()
+    public void SetOnDestroy(UnityAction _value)
     {
-        yield return null;
-        Destroy(gameObject);
+        OnDestroy_Action += _value;
+    }
+
+    private void OnDestroy()
+    {
+        OnDestroy_Action?.Invoke();
+        OnDestroy_Action = null;
     }
 }

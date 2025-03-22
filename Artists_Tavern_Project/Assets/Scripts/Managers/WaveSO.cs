@@ -5,14 +5,14 @@ using UnityEngine;
 public class WaveSO : ScriptableObject
 {
     [SerializeField, Range(0.1f, 9f)] float _spawnTime = 0.4f;
-    [SerializeField] WaveModel _instance = null;
+    [SerializeField] WaveModel _model = null;
 
     public float SpawnTime { get => _spawnTime; private set => _spawnTime = value; }
-    public WaveModel Instance { get => _instance; set => _instance = value; }
+    public WaveModel Model { get => _model; set => _model = value; }
 
     private void OnValidate()
     {
-        _instance.ResetEditorValues();
+        _model.ResetEditorValues();
     }
 }
 
@@ -29,7 +29,7 @@ public class WaveModel
 
     public int MaxActiveSpawns { get => _maxActiveSpawns; private set => _maxActiveSpawns = value; }
 
-    public GameObject GetEntityPrefab()
+    public GameObject GetEntityPrefab(out int _spawnAreaIndex)
     {
         bool _canSpawn;
         int _randomIndex;
@@ -41,6 +41,7 @@ public class WaveModel
 
         } while (!_canSpawn);
 
+        _spawnAreaIndex = _entities[_randomIndex].SpawnAreaIndex;
         _runtimeQuantities[_randomIndex]--;
         return _entities[_randomIndex].Prefab;
     }
