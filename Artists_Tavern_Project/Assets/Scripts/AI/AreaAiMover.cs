@@ -22,6 +22,11 @@ public class AreaAiMover : AiMover
         _timer = _waitTime;
     }
 
+    private void OnDestroy()
+    {
+        _rb.DOKill();
+    }
+
     private void Update()
     {
         _timer += Time.deltaTime;
