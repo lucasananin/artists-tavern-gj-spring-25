@@ -406,8 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waves:
-  - {fileID: 11400000, guid: 0841779deb130af4c8e1d9279731c57c, type: 2}
-  - {fileID: 11400000, guid: d313e85356a0fcf41ba5ebda4c4d140a, type: 2}
+  - {fileID: 11400000, guid: 077ba6a0a07b1d845bec57bf80693f3a, type: 2}
   _spawnAreas:
   - {fileID: 563158296}
   - {fileID: 1341970377}
@@ -2123,7 +2122,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.1, y: 5}
+  m_Size: {x: 0.1, y: 3}
   m_EdgeRadius: 0
 --- !u!1 &1418516458
 GameObject:
@@ -2706,7 +2705,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.1, y: 5}
+  m_Size: {x: 0.1, y: 3}
   m_EdgeRadius: 0
 --- !u!1 &2000444229
 GameObject:

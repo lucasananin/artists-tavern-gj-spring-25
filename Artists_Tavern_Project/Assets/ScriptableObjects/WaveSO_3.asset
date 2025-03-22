@@ -10,19 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ad7c6075726cc84782ed0b782c09275, type: 3}
-  m_Name: WaveSO_1
+  m_Name: WaveSO_3
   m_EditorClassIdentifier: 
   _spawnTime: 0.4
   _model:
     _entities:
-    - _prefab: {fileID: 6797277089447192852, guid: 46f0e222c6b0cb247aea499e191269d2, type: 3}
-      _amount: 3
-      _spawnAreaIndex: 0
-    - _prefab: {fileID: 8075496556590917199, guid: ea0e0d3e6266c1c42a4ce51e0b3ad760, type: 3}
+    - _prefab: {fileID: 8075496556590917199, guid: 2e81800a35b4970479c41fe63d2d5097, type: 3}
       _amount: 2
       _spawnAreaIndex: 1
-    - _prefab: {fileID: 8075496556590917199, guid: ea0e0d3e6266c1c42a4ce51e0b3ad760, type: 3}
+    - _prefab: {fileID: 8075496556590917199, guid: 4695ba27269fc3a4c81be3bf6711227f, type: 3}
       _amount: 2
       _spawnAreaIndex: 2
     _maxActiveSpawns: 3
-    _totalAmount: 7
+    _totalAmount: 4
