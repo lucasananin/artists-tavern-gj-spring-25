@@ -16,4 +16,9 @@ public class AudioSO : ScriptableObject
     {
         OnPlay?.Invoke(this);
     }
+
+    public float GetClipLength()
+    {
+        return _clip.length;
+    }
 }

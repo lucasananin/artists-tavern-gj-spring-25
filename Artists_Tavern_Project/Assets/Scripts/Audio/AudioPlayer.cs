@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class AudioPlayer : MonoBehaviour
 {
-    [SerializeField] AudioSO _so = null;
-    [SerializeField] bool _playOnStart = false;
+    [SerializeField] protected AudioSO _so = null;
+    [SerializeField] protected bool _playOnStart = false;
 
     private void Start()
     {
@@ -13,7 +13,7 @@ public class AudioPlayer : MonoBehaviour
         }
     }
 
-    public void Play()
+    public virtual void Play()
     {
         _so.Play();
     }
