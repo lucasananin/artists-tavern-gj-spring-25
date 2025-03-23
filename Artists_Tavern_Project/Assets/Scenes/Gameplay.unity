@@ -560,6 +560,13 @@ MonoBehaviour:
   _waves:
   - {fileID: 11400000, guid: 0841779deb130af4c8e1d9279731c57c, type: 2}
   - {fileID: 11400000, guid: d313e85356a0fcf41ba5ebda4c4d140a, type: 2}
+  - {fileID: 11400000, guid: 077ba6a0a07b1d845bec57bf80693f3a, type: 2}
+  - {fileID: 11400000, guid: a99a05377001cf442983fd9c9b892802, type: 2}
+  - {fileID: 11400000, guid: 63b65cb4bbcf54547bad89f12f094e34, type: 2}
+  - {fileID: 11400000, guid: 287f8f62b15fe97489ce811fec770a88, type: 2}
+  - {fileID: 11400000, guid: 198f1c165780bb54f8bdc7c0a29aca4d, type: 2}
+  - {fileID: 11400000, guid: 34468c9ec8dc47145b5cb354fd1492e5, type: 2}
+  - {fileID: 11400000, guid: 9367d3054b9aefe48a270afdfc503b16, type: 2}
   - {fileID: 11400000, guid: 0e50ea969e424854f9552fe7c00d427b, type: 2}
   _spawnAreas:
   - {fileID: 563158296}
