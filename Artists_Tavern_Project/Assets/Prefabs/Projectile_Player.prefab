@@ -175,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 3716593634882109747, guid: 2d1ad02a82d48844a9cf128ef5509352, type: 3}
   _projectile: {fileID: -6145551612058337216}
+  _audioSO: {fileID: 11400000, guid: 4ec3b77705a52cf4e91c9d7eb80a9b08, type: 2}
 --- !u!114 &8477414518621515912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,7 +282,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0, g: 1, b: 1, a: 0.2}
+  m_Color: {r: 1, g: 0.5, b: 0, a: 0.2}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -368,7 +369,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.5, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

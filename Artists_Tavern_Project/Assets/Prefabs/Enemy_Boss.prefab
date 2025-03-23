@@ -267,6 +267,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6797277089447192852, guid: 46f0e222c6b0cb247aea499e191269d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6936863276848422942}
+    - targetCorrespondingSourceObject: {fileID: 6797277089447192852, guid: 46f0e222c6b0cb247aea499e191269d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7009962185273549142}
   m_SourcePrefab: {fileID: 100100000, guid: 46f0e222c6b0cb247aea499e191269d2, type: 3}
 --- !u!4 &463352013046249743 stripped
 Transform:
@@ -349,6 +352,21 @@ MonoBehaviour:
   _nextBurst: 0
   _currentShootCount: 0
   _isBursting: 0
+--- !u!114 &7009962185273549142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8075496556590917199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ead18d0c9b94e4996a06e90c9c3ab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _so: {fileID: 11400000, guid: 3f45ff5f4de5b9e4f9d1368f63c69268, type: 2}
+  _playOnStart: 0
+  _w: {fileID: 6936863276848422942}
 --- !u!50 &8492760097771815248 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 6600432507984170507, guid: 46f0e222c6b0cb247aea499e191269d2, type: 3}

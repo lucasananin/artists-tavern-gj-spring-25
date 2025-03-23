@@ -13,6 +13,6 @@ public class ScoreDisplay : MonoBehaviour
 
     private void UpdateVisuals()
     {
-        _text.text = $"Score: {_score.Score}";
+        _text.text = $"{_score.Score}";
     }
 }

@@ -311,6 +311,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxValue: 2
   _currentValue: 0
+  OnDie_UEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8070063160786493275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,6 +384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 3716593634882109747, guid: 9d1d6b541eb17f944af1a34948aa94af, type: 3}
   _health: {fileID: 8476205570020617505}
+  _audioSO: {fileID: 11400000, guid: 10befa650d0977143b4524bcef41a239, type: 2}
 --- !u!114 &-7683532030344460514
 MonoBehaviour:
   m_ObjectHideFlags: 0
