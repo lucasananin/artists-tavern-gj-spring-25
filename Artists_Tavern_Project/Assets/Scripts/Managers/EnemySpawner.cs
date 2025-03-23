@@ -30,6 +30,8 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnWave_Routine()
     {
+        yield return new WaitForSeconds(_waveInitialDelay);
+
         while (_currentWaveIndex < _waves.Length)
         {
             yield return StartCoroutine(SpawnEnemies_Routine());
@@ -46,7 +48,7 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnEnemies_Routine()
     {
-        yield return new WaitForSeconds(_waveInitialDelay);
+        //yield return new WaitForSeconds(_waveInitialDelay / 2f);
 
         var _so = _waves[_currentWaveIndex];
         var _model = _so.Model;
