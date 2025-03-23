@@ -15,7 +15,7 @@ public class PlayerWeapon : WeaponBehaviour
 
     private void Update()
     {
-        _isHoldingTrigger = Input.GetButton("Jump") || Input.GetButton("Fire1");
+        _isHoldingTrigger = Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0);
     }
 
     private void FixedUpdate()

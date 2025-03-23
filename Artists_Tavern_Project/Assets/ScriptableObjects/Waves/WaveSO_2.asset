@@ -15,11 +15,14 @@ MonoBehaviour:
   _spawnTime: 0.4
   _model:
     _entities:
-    - _prefab: {fileID: 6781966346580384766, guid: 3139bf5ce9b68454fbefb15993c1941f, type: 3}
-      _amount: 3
-      _spawnAreaIndex: 0
     - _prefab: {fileID: 8075496556590917199, guid: f6400872c084de1489ec91f0d50b757a, type: 3}
       _amount: 3
       _spawnAreaIndex: 0
+    - _prefab: {fileID: 8075496556590917199, guid: 2e81800a35b4970479c41fe63d2d5097, type: 3}
+      _amount: 3
+      _spawnAreaIndex: 1
+    - _prefab: {fileID: 8075496556590917199, guid: 4695ba27269fc3a4c81be3bf6711227f, type: 3}
+      _amount: 3
+      _spawnAreaIndex: 2
     _maxActiveSpawns: 3
-    _totalAmount: 6
+    _totalAmount: 9
