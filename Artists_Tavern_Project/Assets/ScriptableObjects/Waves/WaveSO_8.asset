@@ -20,6 +20,6 @@ MonoBehaviour:
       _spawnAreaIndex: 1
     - _prefab: {fileID: 8075496556590917199, guid: 4695ba27269fc3a4c81be3bf6711227f, type: 3}
       _amount: 5
-      _spawnAreaIndex: 1
+      _spawnAreaIndex: 2
     _maxActiveSpawns: 4
     _totalAmount: 10

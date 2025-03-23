@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840191fe4663f32458d377466d6b18f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 9001258522799872906, guid: dfa3c6c04a1a5354987b6cedbc1de8db, type: 3}
+  _prefab: {fileID: 9001258522799872906, guid: e1582ce6281537c41a07a3e1ce8b9458, type: 3}
   _weaponRoot: {fileID: 4395527527477551145}
   _muzzles:
   - {fileID: 4395527527477551145}

@@ -135,6 +135,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1857555618788800681, guid: 46f0e222c6b0cb247aea499e191269d2, type: 3}
+      propertyPath: _audioSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 2abbd22c69e2e4f47baf39201fc60f8b, type: 2}
     - target: {fileID: 408989170502941280, guid: 46f0e222c6b0cb247aea499e191269d2, type: 3}
       propertyPath: m_Controller
       value: 
@@ -320,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840191fe4663f32458d377466d6b18f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 9001258522799872906, guid: dfa3c6c04a1a5354987b6cedbc1de8db, type: 3}
+  _prefab: {fileID: 9001258522799872906, guid: a109ab6545436144597e4f15dcf0a73a, type: 3}
   _weaponRoot: {fileID: 6170070638483753839}
   _muzzles:
   - {fileID: 4953752166558468992}
