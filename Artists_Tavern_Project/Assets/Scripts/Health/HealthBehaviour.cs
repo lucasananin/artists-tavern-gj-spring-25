@@ -7,7 +7,9 @@ public class HealthBehaviour : MonoBehaviour
     [SerializeField] protected int _currentValue = 0;
 
     public event UnityAction<HealthBehaviour> OnTakeDamage = null;
-    public event UnityAction<HealthBehaviour> OnDie= null;
+    public event UnityAction<HealthBehaviour> OnDie = null;
+
+    public UnityEvent OnDie_UEvent = null;
 
     protected virtual void Awake()
     {
@@ -32,6 +34,7 @@ public class HealthBehaviour : MonoBehaviour
     public virtual void Die()
     {
         OnDie?.Invoke(this);
+        OnDie_UEvent?.Invoke();
     }
 
     public void RestoreHealth(int _value)

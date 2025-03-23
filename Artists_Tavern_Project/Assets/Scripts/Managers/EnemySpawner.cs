@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] BoxCollider2D[] _spawnAreas = null;
     [SerializeField] float _waveInitialDelay = 2f;
     [SerializeField] bool _spawnOnStart = true;
+
+    public UnityEvent OnAllWavesFinished = null;
 
     [Header("// Readonly")]
     [SerializeField] int _currentWaveIndex = 0;
@@ -36,6 +39,7 @@ public class EnemySpawner : MonoBehaviour
 
         if (_currentWaveIndex >= _waves.Length)
         {
+            OnAllWavesFinished?.Invoke();
             Debug.Log($"All waves finished!");
         }
     }
