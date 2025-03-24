@@ -6,11 +6,13 @@ public class AudioSO : ScriptableObject
 {
     [SerializeField] AudioClip _clip = null;
     [SerializeField] bool _isMusic = false;
+    [SerializeField, Range(0f, 1f)] float _volume = 1;
 
     public static event UnityAction<AudioSO> OnPlay = null;
 
     public AudioClip Clip { get => _clip; }
     public bool IsMusic { get => _isMusic; }
+    public float Volume { get => _volume; }
 
     public void Play()
     {

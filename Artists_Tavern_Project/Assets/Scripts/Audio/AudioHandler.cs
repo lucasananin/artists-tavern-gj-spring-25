@@ -4,6 +4,7 @@ using UnityEngine;
 public class AudioHandler : MonoBehaviour
 {
     [SerializeField] AudioSource _prefab = null;
+    [SerializeField, Range(0f, 1f)] float _volume = 1f;
     [SerializeField] List<AudioSource> _sources = null;
 
     private void Awake()
@@ -26,6 +27,7 @@ public class AudioHandler : MonoBehaviour
         var _source = _soValue.IsMusic ? _sources[0] : GetAvailableSource();
         _source.clip = _soValue.Clip;
         _source.loop = _soValue.IsMusic;
+        _source.volume = _soValue.Volume * _volume;
         _source.Play();
     }
 
